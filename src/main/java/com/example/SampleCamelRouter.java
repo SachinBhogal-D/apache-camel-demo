@@ -56,7 +56,7 @@ public class SampleCamelRouter extends RouteBuilder {
         startPolicy.setRouteStartTime("0 48 13 * * ?");*//*
         JaxbDataFormat df = new JaxbDataFormat("com.example.pojo");
         //df.setIgnoreJAXBElement(false);
-        from("ftp://localhost:21/temp?username=delhivery&password=welcome@123").unmarshal(df).process(my)
+        .unmarshal(df).process(my)
                 //.unmarshal(xmlJsonFormat).process(my).routeId("test").routePolicy(startPolicy).autoStartup(false)
                 // .transform(method("myBean", "saySomething"))
                 .to("file://demo1.txt");
