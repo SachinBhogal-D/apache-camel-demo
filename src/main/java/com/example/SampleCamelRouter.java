@@ -29,7 +29,7 @@ public class SampleCamelRouter extends RouteBuilder {
 
 
 
-        from("ftp://localhost:21/temp?username=delhivery&password=welcome@123&autoCreate=false&noop=true&idempotentKey=${file:name}-${file:modified}&fileName=demo.txt")
+        from("ftp://localhost:21/temp?username=xxxxxxxxxx&password=xxxxxxxx&autoCreate=false&noop=true&idempotentKey=${file:name}-${file:modified}&fileName=demo.txt")
                 .split().method(MyBean.class,"splitterMethod") //.unmarshal(df)
                    .log("After Splitting====>>>>${body}")
                 .choice()
